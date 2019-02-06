@@ -24,14 +24,14 @@ Try to type these examples:
 3.  (optional) go in to interpreters and change (line 18) the command line option to run Minetest on your OS. This allows you to start Minetest from inside the IDE. The current configuration assumes global installation on Linux.
 
 ## Disclaimer
-The information used for auto-completion was written by me--mistakes are not only possible, but highly probable. I have no problem with including fixes from other persons. Based on the feedback of the people and the necessity for improvements, I will decide whether to spend time improving the comment texts, the descriptions of return values and the arguments or move my attention to bigger projects. -wintermute
+The information used for auto-completion was written by me--mistakes are not only possible, but highly probable. I have no problem with including fixes from other persons. Based on the feedback of the people and the necessity for improvements, I will decide whether to spend time improving the comments and the descriptions of return values and the arguments, or move my attention to bigger projects. -wintermute
 
 ## Authors
 * Some content is inspired by or derived from lua-users.org, dev.minetest.net, or lua_api.txt.md.
-* <http://lua-users.org/>  - Sample Code: [MIT License](https://opensource.org/licenses/MIT); text/media: [Creative Commons 0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) (see <http://axlemedia.net/poikilos/images/lua-users.org-copyright-and-license-screenshot.png>)
-* <http://dev.minetest.net> - Creative Commons Attribution Share Alike 3.0
-* [lua_api.txt.md](https://notabug.org/pgimeno/Gists/src/minetest--lua_api.md/lua_api.md) - celeron55 and others
-* There may be content copied from ZeroBrane Studio and therefore under the MIT License and copyright (c) ZeroBrane LLC
+  * <http://lua-users.org/>  - Sample Code: [MIT License](https://opensource.org/licenses/MIT); text/media: [Creative Commons 0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) (see <http://axlemedia.net/poikilos/images/lua-users.org-copyright-and-license-screenshot.png>)
+  * <http://dev.minetest.net> - Creative Commons Attribution Share Alike 3.0
+  * [lua_api.txt.md](https://notabug.org/pgimeno/Gists/src/minetest--lua_api.md/lua_api.md) - celeron55 and others
+* There may be code copied from ZeroBrane Studio and therefore under the [MIT License and Copyright (c) 2011-2017 Paul Kulchenko](https://github.com/pkulchenko/ZeroBraneStudio/blob/master/LICENSE)
 * All content not from sources above is released under the included fallback license (see included [LICENSE](https://github.com/poikilos/MinetestIDE/blob/master/LICENSE) file in your favorite text editor); and copyright 2015 wintermute (post-2015 changes are copyright poikilos 2019-present, and any other authors listed in the git commit history such as at <https://github.com/poikilos/MinetestIDE/commits/master>).
 
 ## Project Status
