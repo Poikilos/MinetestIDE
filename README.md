@@ -27,11 +27,11 @@ Try to type these examples:
 The information used for auto-completion was written by me--mistakes are not only possible, but highly probable. I have no problem with including fixes from other persons. Based on the feedback of the people and the necessity for improvements, I will decide whether to spend time improving the comments and the descriptions of return values and the arguments, or move my attention to bigger projects. -wintermute
 
 ## Authors
-* Some content is inspired by or derived from lua-users.org, dev.minetest.net, or lua_api.txt.md.
-  * <http://lua-users.org/>  - Sample Code: [MIT License](https://opensource.org/licenses/MIT); text/media: [Creative Commons 0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) (see <http://axlemedia.net/poikilos/images/lua-users.org-copyright-and-license-screenshot.png>)
+* Some content is inspired by or derived from [lua_api.txt.md](https://notabug.org/pgimeno/Gists/src/minetest--lua_api.md/lua_api.md) - celeron55 and others.
+* The following reference material was used (whether copied verbatim and from where is not known by poikilos nor the original author wintermute, and the content is considered trivial and/or common knowledge):
+  * <http://lua-users.org/> - The authors (wiki contributors) are ["unknown, unverifiable parties"](http://lua-users.org/cgi-bin/wiki.pl?action=history&id=HomePage) according to the site maintainer JohnBelmonte; The only mention of terms of use of "content" is in mini charter: *"Any data related to the site content (for example, wiki database) should be backed up and made publicly available at regular intervals. One reason for this is if the individuals controlling the lua-users.org site should go astray (from the community's point of view), it will be possible to install the content at another location and the Lua authors can redirect the domain appropriately."*
   * <http://dev.minetest.net> - Creative Commons Attribution Share Alike 3.0
-  * [lua_api.txt.md](https://notabug.org/pgimeno/Gists/src/minetest--lua_api.md/lua_api.md) - celeron55 and others
-* There may be code copied from ZeroBrane Studio and therefore under the [MIT License and Copyright (c) 2011-2017 Paul Kulchenko](https://github.com/pkulchenko/ZeroBraneStudio/blob/master/LICENSE)
+* As this is a mod, the Lua files may contain code copied from ZeroBrane Studio and therefore under the [MIT License and Copyright (c) 2011-2017 Paul Kulchenko](https://github.com/pkulchenko/ZeroBraneStudio/blob/master/LICENSE)
 * All content not from sources above is released under the included fallback license (see included [LICENSE](https://github.com/poikilos/MinetestIDE/blob/master/LICENSE) file in your favorite text editor); and copyright 2015 wintermute (post-2015 changes are copyright poikilos 2019-present, and any other authors listed in the git commit history such as at <https://github.com/poikilos/MinetestIDE/commits/master>).
 
 ## Project Status
