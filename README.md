@@ -40,4 +40,4 @@ The information used for auto-completion was written by me--mistakes are not onl
 
 ## Project Status
 *wintermute* left this to be decided, so I (poikilos) am maintaining it for now. This is a side project, so please submit issues as [pull requests](https://github.com/poikilos/MinetestIDE/pulls) if possible--otherwise use the [Issues](https://github.com/poikilos/MinetestIDE/issues) page. Hopefully wintermute will submit any changes he made after the initial release.
-The initial release was version 1.0 (July 27, 2015) on the minetest.net forum post <https://forum.minetest.net/viewtopic.php?f=14&t=12923>.
+The initial release was version 1.0 (July 27, 2015) on the minetest.net forum post <https://forum.minetest.net/viewtopic.php?f=14&t=12923>--see also <https://forum.minetest.org/viewtopic.php?f=14&t=12923>.
