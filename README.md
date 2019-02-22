@@ -14,8 +14,10 @@ It unites, in a heroic effort, the dev.minetest.net wiki and the Minetest Lua Mo
 
 ## Examples
 Try to type these examples:
-`minetest.get_worldpath():lower():reverse():upper():len()`
-`minetest.get_meta(minetest.get_player_by_name("wintermute"):get_look_dir():multiply({x = 2, y = -3, z = 4}):get_inventory():get_width()`
+```Lua
+minetest.get_worldpath():lower():reverse():upper():len()
+minetest.get_meta(minetest.get_player_by_name("wintermute"):get_look_dir():multiply({x = 2, y = -3, z = 4}):get_inventory():get_width()
+```
 
 ## Installation
 (if you are using Linux, run `bash install.sh` instead)
