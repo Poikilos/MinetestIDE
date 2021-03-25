@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 echo
 zs_dest=/opt/zbstudio
 if [ "$1" == "uninstall" ]; then
@@ -27,7 +27,7 @@ if [ "$1" == "uninstall" ]; then
     end_ret=1
     end_msg="Uninstall FAILED."
   fi
-  
+
   bad_file="$zs_dest/zbstudio/api/lua/minetest.lua"
   dest_file="$zs_dest/api/lua/minetest.lua"
   if [ -f "$bad_file" ]; then
@@ -88,7 +88,7 @@ if [ ! -d "$zs_dest" ]; then
 fi
 if [ ! -d "$zs_dest" ]; then
   echo "ERROR: nothing done since missing $zs_dest."
-  echo "You first must install ZeroBrane studio."
+  echo "You first must install ZeroBrane studio (See readme)."
   exit 3
 fi
 cd "$mi_path"
