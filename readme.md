@@ -2,14 +2,14 @@
 This is wintermute's working & wonderful Minetest IDE, based on ZeroBrane Studio!
 
 > Dear Minetest-Community,
-> 
+>
 > I am happy to announce that the thing nobody waited for, and one may actually use and like, is ready.
 > We can hope that this lowers the burden of developing mods and brings fun into programming.
 > Minetest lives and dies with its Mods, so for Minetest to survive and to strive for better content, one thing is inevitable: an environment which produces code. While in the past one may have written mods in notepad.exe, Notepad++, Vim or Emacs, we can now strive for unity--one experience across Mac, Linux and Windows. The ZeroBrane Studio, a lightweight, easy-to-learn, highly-customizable piece of Free Software, allows for this [after some modding of the program itself].
-> 
+>
 > MinetestIDE provides not only keyword highlighting for Lua, but also excellent code completion enriched with the wisest comments from celeron55 and the community.
 It unites, in a heroic effort, the dev.minetest.net wiki and the Minetest Lua Modding API Reference. This was possible due to ZeroBrane Studio being highly modable, having many parts written in Lua.
-> 
+>
 > *-wintermute [edited by poikilos for spelling, grammar, and clarification]*
 
 ## Examples
