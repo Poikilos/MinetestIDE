@@ -58,25 +58,52 @@ if [ "$1" == "uninstall" ]; then
   echo
   exit $end_ret
 fi
-if [ ! -d zbstudio ]; then
-  cd "${0%/*}"
-  echo "WARNING: had to change directory to `pwd` since zbstudio patch directory was not found..."
-fi
-if [ ! -d zbstudio ]; then
-  echo "ERROR: Nothing done since missing zbstudio patch--you must run this installer from the MinetestIDE directory containing the zbstudio patch directory."
+printf "* checking installer..."
+good_src_flag="zbstudio/interpreters/minetest.lua"
+#if [ ! -d zbstudio ]; then
+#  cd "${0%/*}"
+#  if [ -f "$good_src_flag" ]; then
+#      echo "WARNING: had to change directory to `pwd` since zbstudio patch directory was not found..."
+#  fi
+#fi
+if [ ! -f "$good_src_flag" ]; then
+  echo "ERROR: Nothing done since missing zbstudio patch--you must run this installer from the MinetestIDE directory containing \"$good_src_flag\"."
   echo
   echo
   exit 1
 fi
+echo "OK (found \"$good_src_flag\" in \"`pwd`\")"
 mi_path="`pwd`"
 end_msg=""
 if [ ! -d "$zs_dest" ]; then
-  if [ ! -d "$HOME/Downloads" ]; then mkdir -p "$HOME/Downloads"; fi
+  echo "* installing zbstudio to $zs_dest..."
+  if [ ! -d "$HOME/Downloads" ]; then
+    mkdir -p "$HOME/Downloads"
+    if [ $? -ne 0 ]; then
+      echo "Error: 'mkdir -p \"$HOME/Downloads\"' failed"
+      exit 1
+    fi
+  fi
   cd "$HOME/Downloads"
   dl_name=ZeroBraneStudioEduPack-1.80-linux.sh
+  URL=https://download.zerobrane.com/$dl_name
   if [ ! -f "$dl_name" ]; then
-    wget -O $dl_name https://download.zerobrane.com/$dl_name
+    if [ ! -f "`command -v wget`" ]; then
+      echo "Error: This script requires wget unless \"$dl_name\" is in \"`pwd`\"."
+      exit 1
+    fi
+    echo "* downloading $URL..."
+    wget -O $dl_name $URL
+    if [ $? -ne 0 ]; then
+      echo "Error: 'wget -O $dl_name $URL' failed in \"`pwd`\""
+      exit 1
+    fi
+    echo "* running '$dl_name' in \"`pwd`\"..."
     sh $dl_name
+    if [ $? -ne 0 ]; then
+      echo "Error: 'sh $dl_name' failed in \"`pwd`\""
+      exit 1
+    fi
     if [ ! -d "$zs_dest" ]; then
       echo "ERROR: MinetestIDE not installed since failed to install $zs_dest"
       echo
@@ -85,6 +112,8 @@ if [ ! -d "$zs_dest" ]; then
     fi
     end_msg="If you paid for ZeroBrane Studio, thank you for your contribution. If you have not, please consider supporting the project <https://studio.zerobrane.com/support>."
   fi
+else
+  echo "* detected $zs_dest"
 fi
 if [ ! -d "$zs_dest" ]; then
   echo "ERROR: nothing done since missing $zs_dest."
@@ -92,6 +121,10 @@ if [ ! -d "$zs_dest" ]; then
   exit 3
 fi
 cd "$mi_path"
+if [ $? -ne 0 ]; then
+  echo "Error: 'cd \"$mi_path\"' failed in \"`pwd`\""
+  exit 1
+fi
 if [ ! -f "`command -v rsync`" ]; then
   #echo "ERROR: Nothing done since rsync is required."
   #exit 5
@@ -113,7 +146,14 @@ if [ ! -f "`command -v rsync`" ]; then
   fi
   echo "Successfully installed. See README for manual steps needed in GUI."
 else
+  printf "* installing patches to \"$zs_dest\"..."
   sudo rsync -rt zbstudio/ $zs_dest
+  if [ $? -ne 0 ]; then
+    echo "FAILED"
+    exit 1
+  else
+    echo "OK"
+  fi
 fi
 echo "$end_msg"
 echo
